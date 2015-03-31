@@ -26,3 +26,14 @@ xlabel('Number of days')
 ylabel('Total snowfall (in)')
 title('Max total snowfall in an n-day period')
 legend('pre-2015 record','2015','1978','Location','southeast')
+
+% Add lines to call out a few time periods
+yl = ylim;
+plot([7 7],yl,':k')
+plot([14 14],yl,':k')
+plot([30 30],yl,':k')
+% Add text annotations
+yl = mean(yl);
+text(7,yl,'One week','Rotation',90,'VerticalAlignment','bottom')
+text(14,yl,'Two weeks','Rotation',90,'VerticalAlignment','bottom')
+text(30,yl,'One month','Rotation',90,'VerticalAlignment','bottom')
